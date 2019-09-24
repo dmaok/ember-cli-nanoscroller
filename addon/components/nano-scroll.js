@@ -1,7 +1,7 @@
-import Ember from 'ember';
 import layout from '../templates/components/nano-scroll';
-
-const { Component, Evented, on, run } = Ember;
+import Component from '@ember/component';
+import Evented, { on }  from '@ember/object/evented';
+import { run } from '@ember/runloop';
 
 // TODO: Test coverage for events and properties
 
