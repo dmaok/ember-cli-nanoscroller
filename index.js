@@ -7,7 +7,6 @@ module.exports = {
       'jquery.nanoScroller': {
         vendor: [
           'vendor/nanoscroller/bin/javascripts/jquery.nanoscroller.js',
-          'vendor/nanoscroller/bin/javascripts/jquery.nanoscroller.js.map',
           'vendor/nanoscroller/bin/css/nanoscroller.css',
         ]
       }
