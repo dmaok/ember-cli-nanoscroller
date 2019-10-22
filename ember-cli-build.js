@@ -16,7 +16,6 @@ module.exports = function(defaults) {
   */
 
   app.import('vendor/nanoscroller/bin/javascripts/jquery.nanoscroller.js');
-  app.import('vendor/nanoscroller/bin/javascripts/jquery.nanoscroller.js.map');
   app.import('vendor/nanoscroller/bin/css/nanoscroller.css');
 
   return app.toTree();
