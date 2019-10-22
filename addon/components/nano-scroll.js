@@ -1,7 +1,8 @@
 import layout from '../templates/components/nano-scroll';
 import Component from '@ember/component';
-import Evented, { on }  from '@ember/object/evented';
+import Evented from '@ember/object/evented';
 import { run } from '@ember/runloop';
+import jQuery from 'jquery'
 
 // TODO: Test coverage for events and properties
 
@@ -10,8 +11,9 @@ export default Component.extend(Evented, {
 
   classNames: ['nano'],
 
-  initNanoScroll: on('didInsertElement', function() {
-    const scroller = this.$().nanoScroller({
+  didInsertElement() {
+    this._super(...arguments);
+    const scroller = jQuery(this.element).nanoScroller({
       iOSNativeScrolling: this.get('iOSNativeScrolling'),
       sliderMinHeight: this.get('sliderMinHeight'),
       sliderMaxHeight: this.get('sliderMaxHeight'),
@@ -43,7 +45,7 @@ export default Component.extend(Evented, {
         this.get('scroller').nanoScroller({ scrollBottom: this.get('scrollBottom') });
       });
     }
-  }),
+  },
 
   scroll(scroll) {
     this.get('scroller').nanoScroller({

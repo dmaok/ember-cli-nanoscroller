@@ -17,7 +17,7 @@ module.exports = {
      this._super.included.apply(this, arguments);
 
      if (!process.env.EMBER_CLI_FASTBOOT) {
-       this.import('vendor/nanoscroller/bin/javascripts/jquery.nanoscroller.js');
+       this.import('vendor/nanoscroller/bin/javascripts/jquery.nanoscroller.min.js');
        this.import('vendor/nanoscroller/bin/css/nanoscroller.css');
      }
    }
